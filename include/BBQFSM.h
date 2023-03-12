@@ -124,6 +124,12 @@ BBQFSM::BBQstate BBQFSM::Idle(){
   current_state = IDLE;
   printCurrentState();
   usleep(delay_time);
+
+  // TODO: check for button state change or set of member variable to toggle other states
+  // if (buttonState == 1)
+  // {
+  //  current_state = AUTO_INIT
+  //}
   return current_state;
 };
 BBQFSM::BBQstate BBQFSM::AutoInit(){
@@ -138,6 +144,8 @@ BBQFSM::BBQstate BBQFSM::AutoInit(){
   // Load temp waveform
   // Initialize logging
   // Set AutoControl() if successful
+  // Get an average of temp probes to set initial state
+
   count++;
   if (count > 100) {
     current_state = IDLE;

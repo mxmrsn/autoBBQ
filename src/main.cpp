@@ -84,6 +84,9 @@ int main () {
       time_t currrent_DateTime;
       time(&currrent_DateTime);
       log_file<<ctime(&currrent_DateTime)<<","<<fsm.current_state<<",";
+      // log_file<<fsm.bbq.button_state<<",";
+      // log_file<<fsm.temp_probe1<<",";
+      // log_file<<fsm.temp_probe2<<",";
   		log_file<<std::endl;
   	}
   }
